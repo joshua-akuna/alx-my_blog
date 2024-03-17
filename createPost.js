@@ -1,6 +1,6 @@
 const config = require("./config")
+const { marked } = require("./marked")
 const fm = require("front-matter")
-const { marked } = require("marked")
 const fs = require("fs")
 
 const createPost = path => {
