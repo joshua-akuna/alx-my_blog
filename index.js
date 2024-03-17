@@ -1,10 +1,13 @@
 const express = require('express')
+const posts = require('./posts')
 
 const app = express()
 const port = 3000
 
+app.set('view engine', 'ejs')
+
 app.get('/', (req, res)=>{
-    res.send("Hello World!")
+    res.render('index', {posts: posts})
 })
 
 app.listen(port, ()=>{

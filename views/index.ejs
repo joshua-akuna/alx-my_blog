@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBlog | Home</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <% posts.forEach((post)=> {%>
+                <article>
+                    <div>
+                        <%= post.body %>
+                    </div>
+                    <div>
+                        <a href="/<%= post.attributes.slug %>">See more</a>
+                    </div>
+                </article>
+            <%})%>
+        </section>
+    </main>
+</body>
+</html>
